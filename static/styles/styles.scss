@@ -1,0 +1,153 @@
+// Breakpoint mixins
+// 640px, 1024px, 1400px
+$breakpoints-up: ("medium": "40em", "large": "64em", "xlarge": "87.5em");
+
+// 639px, 1023px, 1399px
+$breakpoints-down: ("small": "39.9375em" ,"medium": "63.9375em", "large": "87.4375em");
+
+@mixin breakpoint-up($size){
+	@media (min-width: map-get($breakpoints-up, $size)) {
+		@content;
+	}
+}
+
+@mixin breakpoint-down($size){
+	@media (max-width: map-get($breakpoints-down, $size)) {
+		@content;
+	}
+}
+
+// --------------------------------------------------------
+
+// Variables
+// Weights: 500(med), 700(bold), 900(black)
+$paleBlue: hsl(225, 100%, 94%);
+$brightBlue: hsl(245, 75%, 52%);
+$veryPaleBlue: hsl(225, 100%, 98%);
+$desaturatedBlue: hsl(224, 23%, 55%);
+$darkBlue: hsl(223, 47%, 23%);
+
+
+// Globals
+html {
+	font-size: 100%;
+	box-sizing: border-box;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Red Hat Display', sans-serif;
+	font-size: 1rem;
+	font-weight: 500;
+	color: $desaturatedBlue;
+	background-color: $paleBlue;
+	line-height: 1.3;
+	min-height: 100vh;
+	overflow-x: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+// -------------------------------------------------
+
+
+.card {
+	display: flex;
+	flex-direction: column;
+	border-radius: 18px;
+	background-color: #fff;
+	max-width: 20.4375rem;
+
+	&__header {
+		width: 20.4375rem;
+		height: 10rem;
+		background-color: lightcyan;
+		border-top-left-radius: 18px;
+		border-top-right-radius: 18px;
+		background-image: url(../images/illustration-hero.svg);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	&__body {
+		background-color: #fff;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		border-bottom-left-radius: 18px;
+		border-bottom-right-radius: 18px;
+		padding: 2rem 1.5rem;
+
+		.order-details {
+			width: 100%;
+			background-color: $veryPaleBlue;
+			padding: 1rem;
+			margin-bottom: 1.625rem;
+			border-radius: 11px;
+			display: flex;
+			align-items: center;
+
+			img {
+				margin-right: 1.125rem;
+			}
+
+			.plan {
+				h2 {
+					font-size: 0.875rem;
+					font-weight: 900;
+					color: $darkBlue;
+				}
+
+				p {
+					font-size: 0.9375rem;
+				}
+			}
+
+			a {
+				margin-left: 2rem;
+				font-weight: 900;
+				color: $brightBlue;
+			}
+		}
+
+		.order-btn {
+			border: none;
+			width: 100%;
+			padding: 0.875rem 4rem;
+			background-color: $brightBlue;
+			border-radius: 11px;
+			margin-bottom: 1.5rem;
+			font-weight: 700;
+			color: #fff;
+		}
+
+		.cancel {
+			text-decoration: none;
+			color: $desaturatedBlue;
+			font-weight: 700;
+		}
+	}
+
+	&__title {
+		font-size: 1.3125rem;
+		font-weight: 900;
+		color: $darkBlue;
+		margin-bottom: 1.25rem;
+	}
+
+	&__text {
+		text-align: center;
+		margin-bottom: 1.625rem;
+		max-width: 17rem;
+	}
+}

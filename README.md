@@ -30,10 +30,12 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [github.com/nathanieladiah/order-summary](https://github.com/nathanieladiah/order-summary)
+- Live Site URL: [nathanieladiah.github.io/order-summary/](https://nathanieladiah.github.io/order-summary/)
 
 ## My process
+
+Create an Xd design to get as close as possible.
 
 ### Built with
 
