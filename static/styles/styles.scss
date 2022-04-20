@@ -48,12 +48,19 @@ body {
 	font-weight: 500;
 	color: $desaturatedBlue;
 	background-color: $paleBlue;
+	background-image: url(../images/pattern-background-mobile.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
 	line-height: 1.3;
 	min-height: 100vh;
 	overflow-x: hidden;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
+	@include breakpoint-up(medium) {
+		background-image: url(../images/pattern-background-desktop.svg);
+	}
 }
 
 
@@ -67,6 +74,11 @@ body {
 	background-color: #fff;
 	max-width: 20.4375rem;
 
+	@include breakpoint-up(medium) {
+		max-width: 28.125rem;
+		margin: 0.5rem 0;
+	}
+
 	&__header {
 		width: 20.4375rem;
 		height: 10rem;
@@ -76,6 +88,10 @@ body {
 		background-image: url(../images/illustration-hero.svg);
 		background-repeat: no-repeat;
 		background-size: cover;
+
+		@include breakpoint-up(medium) {
+			width: 28.125rem;
+		}
 	}
 
 	&__body {
@@ -88,6 +104,10 @@ body {
 		border-bottom-right-radius: 18px;
 		padding: 2rem 1.5rem;
 
+		@include breakpoint-up(medium) {
+			padding: 2.25rem 2.9375rem;
+		}
+
 		.order-details {
 			width: 100%;
 			background-color: $veryPaleBlue;
@@ -97,8 +117,16 @@ body {
 			display: flex;
 			align-items: center;
 
+			@include breakpoint-up(medium) {
+				margin-bottom: 2rem;
+			}
+
 			img {
 				margin-right: 1.125rem;
+
+				@include breakpoint-up(medium) {
+					margin-right: 1.3125rem;
+				}
 			}
 
 			.plan {
@@ -106,6 +134,10 @@ body {
 					font-size: 0.875rem;
 					font-weight: 900;
 					color: $darkBlue;
+
+					@include breakpoint-up(medium) {
+						font-size: 1rem;
+					}
 				}
 
 				p {
@@ -117,6 +149,15 @@ body {
 				margin-left: 2rem;
 				font-weight: 900;
 				color: $brightBlue;
+
+				@include breakpoint-up(medium) {
+					margin-left: 5.5rem;
+
+					&:hover {
+						opacity: 0.75;
+						text-decoration: none;
+					}
+				}
 			}
 		}
 
@@ -129,12 +170,25 @@ body {
 			margin-bottom: 1.5rem;
 			font-weight: 700;
 			color: #fff;
+			cursor: pointer;
+
+			@include breakpoint-up(medium) {
+				&:hover {
+					opacity: 0.75;
+				}
+			}
 		}
 
 		.cancel {
 			text-decoration: none;
 			color: $desaturatedBlue;
 			font-weight: 700;
+			cursor: pointer;
+
+			&:hover {
+				color: $darkBlue;
+				font-weight: 900;
+			}
 		}
 	}
 
@@ -143,11 +197,20 @@ body {
 		font-weight: 900;
 		color: $darkBlue;
 		margin-bottom: 1.25rem;
+
+		@include breakpoint-up(medium) {
+			font-size: 1.6875rem;
+		}
 	}
 
 	&__text {
 		text-align: center;
 		margin-bottom: 1.625rem;
 		max-width: 17rem;
+
+		@include breakpoint-up(medium) {
+			max-width: 19rem;
+			margin-bottom: 1.1875rem;
+		}
 	}
 }

@@ -19,6 +19,9 @@ body {
   font-weight: 500;
   color: #7280a7;
   background-color: #e0e8ff;
+  background-image: url(../images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
   line-height: 1.3;
   min-height: 100vh;
   overflow-x: hidden;
@@ -31,6 +34,12 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media (min-width: 40em) {
+  body {
+    background-image: url(../images/pattern-background-desktop.svg);
+  }
 }
 
 .card {
@@ -46,6 +55,13 @@ body {
   max-width: 20.4375rem;
 }
 
+@media (min-width: 40em) {
+  .card {
+    max-width: 28.125rem;
+    margin: 0.5rem 0;
+  }
+}
+
 .card__header {
   width: 20.4375rem;
   height: 10rem;
@@ -55,6 +71,12 @@ body {
   background-image: url(../images/illustration-hero.svg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media (min-width: 40em) {
+  .card__header {
+    width: 28.125rem;
+  }
 }
 
 .card__body {
@@ -77,6 +99,12 @@ body {
   padding: 2rem 1.5rem;
 }
 
+@media (min-width: 40em) {
+  .card__body {
+    padding: 2.25rem 2.9375rem;
+  }
+}
+
 .card__body .order-details {
   width: 100%;
   background-color: #f5f7ff;
@@ -91,14 +119,32 @@ body {
           align-items: center;
 }
 
+@media (min-width: 40em) {
+  .card__body .order-details {
+    margin-bottom: 2rem;
+  }
+}
+
 .card__body .order-details img {
   margin-right: 1.125rem;
+}
+
+@media (min-width: 40em) {
+  .card__body .order-details img {
+    margin-right: 1.3125rem;
+  }
 }
 
 .card__body .order-details .plan h2 {
   font-size: 0.875rem;
   font-weight: 900;
   color: #1f2f56;
+}
+
+@media (min-width: 40em) {
+  .card__body .order-details .plan h2 {
+    font-size: 1rem;
+  }
 }
 
 .card__body .order-details .plan p {
@@ -111,6 +157,16 @@ body {
   color: #3829e0;
 }
 
+@media (min-width: 40em) {
+  .card__body .order-details a {
+    margin-left: 5.5rem;
+  }
+  .card__body .order-details a:hover {
+    opacity: 0.75;
+    text-decoration: none;
+  }
+}
+
 .card__body .order-btn {
   border: none;
   width: 100%;
@@ -120,12 +176,25 @@ body {
   margin-bottom: 1.5rem;
   font-weight: 700;
   color: #fff;
+  cursor: pointer;
+}
+
+@media (min-width: 40em) {
+  .card__body .order-btn:hover {
+    opacity: 0.75;
+  }
 }
 
 .card__body .cancel {
   text-decoration: none;
   color: #7280a7;
   font-weight: 700;
+  cursor: pointer;
+}
+
+.card__body .cancel:hover {
+  color: #1f2f56;
+  font-weight: 900;
 }
 
 .card__title {
@@ -135,9 +204,22 @@ body {
   margin-bottom: 1.25rem;
 }
 
+@media (min-width: 40em) {
+  .card__title {
+    font-size: 1.6875rem;
+  }
+}
+
 .card__text {
   text-align: center;
   margin-bottom: 1.625rem;
   max-width: 17rem;
+}
+
+@media (min-width: 40em) {
+  .card__text {
+    max-width: 19rem;
+    margin-bottom: 1.1875rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
