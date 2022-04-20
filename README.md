@@ -10,9 +10,6 @@ This is a solution to the [Order summary card challenge on Frontend Mentor](http
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 
 
@@ -26,7 +23,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshot.png)
 
 ### Links
 
@@ -43,13 +40,6 @@ Create an Xd design to get as close as possible.
 - Flexbox
 - Mobile-first workflow
 - Scss
-
-### What I learned
-
-### Continued development
-
-
-### Useful resources
 
 ## Author
 
